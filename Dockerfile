@@ -12,4 +12,6 @@ FROM alpine:latest AS deployment
 RUN mkdir -p "/opt/bin"
 COPY --from=build "/build/fabricator" "/opt/bin"
 
+RUN mkdir -p "/out"
+WORKDIR "/out"
 ENTRYPOINT ["/opt/bin/fabricator"]

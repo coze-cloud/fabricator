@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/cozy-hosting/fabricator/project"
+)
 
 func main() {
-	fmt.Println("Welcome to fabricator!")
+	fmt.Println(project.NewMainGenerator())
 }
